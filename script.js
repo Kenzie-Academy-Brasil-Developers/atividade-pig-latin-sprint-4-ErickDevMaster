@@ -54,7 +54,7 @@ function encodeConsonantWord(word) {
     
     return word; // replace this!
 }        
-  console.log(encodeConsonantWord("Latin"))
+
   /*  
       ETAPA # 3: decida se uma determinada palavra começa com um som de vogal ou som consonantal,
       e chame encodeVowelWord (palavra) ou encodeConsonantWord (palavra) quando relevante.
@@ -77,7 +77,7 @@ function encodeConsonantWord(word) {
 
     return palavra; // replace this!
   }
-  console.log(encodeWord("cheers"))
+
   /*
      PASSO # 4: Codifique uma frase ou parágrafo completo do inglês para o latim.
   */
@@ -96,9 +96,7 @@ function encodeConsonantWord(word) {
     }
     return result; // replace this!
   }
-  let text = "In linguistics, a notion of text is broad and still open to more precise definition. Roughly speaking, it can be understood as a linguistic manifestation of an author's ideas, which will be interpreted by the reader according to their linguistic and cultural knowledge."
-  //let text = "cheers latin"
-  console.log(encodeText(text))
+
   /*
      ETAPA # 5: Crie um formulário da web onde os usuários possam inserir qualquer mensagem em inglês simples
     e codifique-o em porco latino.
@@ -107,7 +105,6 @@ function encodeConsonantWord(word) {
         let caixa = encodeText(document.querySelector(".entrada").value)
         let saida = document.querySelector(".saida")
         saida.innerText = caixa
-        console.log(caixa)
     }
     
     let botao = document.querySelector(".botao")
