@@ -30,12 +30,13 @@ function encodeConsonantWord(word) {
     let totalConsoante = 0
     let consoantes = ""
     let pontuacao = ""
+    let wordPotuation = ""
     if(/^[a-zA-Z\u00C0-\u00ff]+$/.test(word[word.length-1]) == false){
         pontuacao = word[word.length-1]
+        wordPotuation = word
         word = word.replace(word[word.length-1],"")
     }
-
-    for(let i = 0 ; i < word.length ;i++){
+    for(let i = 0 ; i < word.length-1 ;i++){
         if(!(word[i]=='a' || word[i]=='e' || word[i]=='i' || word[i]=='o' || word[i]=='u')){
             totalConsoante++
             consoantes += word[i]
@@ -43,8 +44,13 @@ function encodeConsonantWord(word) {
             i = word.length
         }
     }
-  
-    word = word.substr(totalConsoante, word.length)+"-"+consoantes+"ay"+pontuacao
+    if(word !== ""){
+        word = word.substr(totalConsoante, word.length)+"-"+consoantes+"ay"+pontuacao
+    }else{
+        word = wordPotuation
+    }
+    
+    
     
     return word; // replace this!
 }        
